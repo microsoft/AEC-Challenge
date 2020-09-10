@@ -15,6 +15,18 @@ git add .gitattributes
 ```
 git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ```
+## Citation:
+For the datasets and the DNS challenge:<br />  
+
+```BibTex
+@article{Sridar2020,
+  title={ICASSP 2021 Acoustic Echo Cancellation Challenge: Datasets and Testing Framework},
+  author={Kusha Sridhar, Ross Cutler, Ando Saabas, Tanel Parnamaa, Hannes Gamper, Sebastian Braun, Robert Aichner, Sriram Srinivasan},
+  journal={arXiv preprint arXiv:TBD},
+  year={2020}
+}
+```
+
 ## Dataset licenses
 MICROSOFT PROVIDES THE DATASETS ON AN "AS IS" BASIS. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, GUARANTEES OR CONDITIONS WITH RESPECT TO YOUR USE OF THE DATASETS. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAW, MICROSOFT DISCLAIMS ALL LIABILITY FOR ANY DAMAGES OR LOSSES, INLCUDING DIRECT, CONSEQUENTIAL, SPECIAL, INDIRECT, INCIDENTAL OR PUNITIVE, RESULTING FROM YOUR USE OF THE DATASETS.
 

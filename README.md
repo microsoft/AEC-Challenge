@@ -16,7 +16,7 @@ git add .gitattributes
 git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ```
 ## Citation:
-For the datasets and the DNS challenge:<br />  
+For the datasets and the AEC challenge:<br />  
 
 ```BibTex
 @article{Sridar2020,

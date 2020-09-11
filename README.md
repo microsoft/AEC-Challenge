@@ -1,6 +1,8 @@
 # AEC Challenge
 The ICASSP 2021 Acoustic Echo Cancellation Challenge is intended to stimulate research in the area of acoustic echo cancellation (AEC), which is an important part of speech enhancement and still a top issue in audio communication and conferencing systems. Many recent AEC studies report reasonable performance on synthetic datasets where the train and test samples come from the same underlying distribution. However, the AEC performance often degrades significantly on real recordings. Also, most of the conventional objective metrics such as  echo return loss enhancement (ERLE) and perceptual evaluation of speech quality (PESQ) do not correlate well with subjective speech quality tests in the presence of background noise and reverberation found in realistic environments. In this challenge, we open source two large datasets to train AEC models under both single talk and double talk scenarios. These datasets consist of recordings from more than 2,500 real audio devices and human speakers in real environments, as well as a synthetic dataset. We open source an online subjective test framework based on ITU-T P.808 for researchers to quickly test their results. The winners of this challenge will be selected based on the average P.808 Mean Opinion Score (MOS) achieved across all different single talk and double talk scenarios.
 
+For more details about the challenge, please visit the challenge [website](http://aec-challenge.azurewebsites.net/) and refer to the [paper](https://arxiv.org/abs/2009.04972).
+
 # Repo details
 * The datasets directory contains the real and synthetic training datasets and real test sets.
 

@@ -22,8 +22,9 @@ For the datasets and the AEC challenge:<br />
 @article{Sridar2020,
   title={ICASSP 2021 Acoustic Echo Cancellation Challenge: Datasets and Testing Framework},
   author={Kusha Sridhar, Ross Cutler, Ando Saabas, Tanel Parnamaa, Hannes Gamper, Sebastian Braun, Robert Aichner, Sriram Srinivasan},
-  journal={arXiv preprint arXiv:TBD},
-  year={2020}
+  journal={arXiv preprint arXiv:2009.04972},
+  year={2020},
+  url={https://arxiv.org/pdf/2009.04972.pdf}
 }
 ```
 

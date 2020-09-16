@@ -28,6 +28,16 @@ For the datasets and the AEC challenge:<br />
 }
 ```
 
+For the test framework:<br />
+```BibTex
+@article{naderi2020open,
+  title={An Open source Implementation of ITU-T Recommendation P. 808 with Validation},
+  author={Naderi, Babak and Cutler, Ross},
+  journal={arXiv preprint arXiv:2005.08138},
+  year={2020}
+}
+```
+
 ## Dataset licenses
 MICROSOFT PROVIDES THE DATASETS ON AN "AS IS" BASIS. MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, GUARANTEES OR CONDITIONS WITH RESPECT TO YOUR USE OF THE DATASETS. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAW, MICROSOFT DISCLAIMS ALL LIABILITY FOR ANY DAMAGES OR LOSSES, INLCUDING DIRECT, CONSEQUENTIAL, SPECIAL, INDIRECT, INCIDENTAL OR PUNITIVE, RESULTING FROM YOUR USE OF THE DATASETS.
 

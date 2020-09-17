@@ -19,6 +19,6 @@ The real dataset files use the following naming conventions:
   * GUID_sweep_lpb.wav
   * GUID_sweep_mic.wav
 
-The real files were captured on Windows PCs as shown below. Some PCs may have audio DSP processing in the send and/or receive path, even though we used a raw mode to play and capture audio.
+The real files were captured on Windows PCs as shown below. Loopback is abbreviated lpb in the filenames. Some PCs may have audio DSP processing in the send and/or receive path, even though we used a raw mode to play and capture audio.
 
 ![alt text](https://github.com/microsoft/AEC-Challenge/blob/main/images/Recording.png)

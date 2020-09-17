@@ -21,4 +21,4 @@ The real dataset files use the following naming conventions:
 
 The real files were captured on Windows PCs as shown below. Some PCs may have audio DSP processing in the send and/or receive path, even though we used a raw mode to play and capture audio.
 
-![alt text](https://github.com/microsoft/AEC-Challenge/images/Recording.png"Recording")
+![alt text](https://github.com/microsoft/AEC-Challenge/blob/main/images/Recording.png)

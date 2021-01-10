@@ -16,7 +16,7 @@ git lfs install
 git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ```
 ## Citation:
-For the datasets and the AEC challenge:<br />  
+If you use this dataset in a publication please cite the following paper:<br />  
 
 ```BibTex
 @article{Sridar2020,
@@ -28,7 +28,7 @@ For the datasets and the AEC challenge:<br />
 }
 ```
 
-For the test framework:<br />
+If you use the test framework in a publication please cite the following paper:<br />
 ```BibTex
 @article{naderi2020open,
   title={An Open source Implementation of ITU-T Recommendation P. 808 with Validation},

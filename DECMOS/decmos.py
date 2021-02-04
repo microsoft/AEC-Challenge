@@ -104,9 +104,8 @@ def read_and_process_audio_files(lpb_path, mic_path, clip_path):
     enh_sig = enh_sig[:min_len]
 
     if is_interspeech2021_clip(clip_path):
-        clip_scenario = get_clip_scenario(os.path.basename(clip_path))
         lpb_sig, mic_sig, enh_sig = process_interspeech2021(
-            lpb_sig, mic_sig, enh_sig, clip_scenario)
+            lpb_sig, mic_sig, enh_sig, clip_path)
 
     return lpb_sig, mic_sig, enh_sig
 
@@ -117,11 +116,13 @@ def is_interspeech2021_clip(clip_path):
     return 'test_set_interspeech2021' in clip_path
 
 
-def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_scenario):
+def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
+    clip_name = os.path.basename(clip_path)
+    clip_scenario = get_clip_scenario(clip_name)
     if clip_scenario in ['doubletalk_with_movement', 'doubletalk']:
         silence_duration = 15 * SAMPLE_RATE  # in seconds
         rating_dt_length = int((len(enh_sig) - silence_duration) / 2)
-        assert rating_dt_length > 0, 'Clip is too short for filtering'
+        assert rating_dt_length > 0, f'Clip {clip_name} is too short for cutting'
 
         lpb_sig = lpb_sig[-rating_dt_length:]
         mic_sig = mic_sig[-rating_dt_length:]
@@ -129,7 +130,7 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_scenario):
 
     elif clip_scenario in ['farend_singletalk_with_movement', 'farend_singletalk']:
         rating_fest_length = int(len(enh_sig) / 2)
-        assert rating_fest_length > 0, 'Clip is too short for filtering'
+        assert rating_fest_length > 0, f'Clip {clip_name} is too short for cutting'
 
         lpb_sig = lpb_sig[-rating_fest_length:]
         mic_sig = mic_sig[-rating_fest_length:]

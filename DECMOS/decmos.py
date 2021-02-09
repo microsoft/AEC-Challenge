@@ -98,6 +98,7 @@ def read_and_process_audio_files(lpb_path, mic_path, clip_path):
     mic_sig, _ = librosa.load(mic_path, sr=SAMPLE_RATE)
     enh_sig, _ = librosa.load(clip_path, sr=SAMPLE_RATE)
 
+    # Make the clips the same length
     min_len = np.min([len(lpb_sig), len(mic_sig), len(enh_sig)])
     lpb_sig = lpb_sig[:min_len]
     mic_sig = mic_sig[:min_len]
@@ -146,9 +147,9 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
 
 def get_score(lpb_sig, mic_sig, enh_sig):
     audio_data = {
-        "lpb": lpb_sig.tolist(),
-        "mic": mic_sig.tolist(),
-        "enh": enh_sig.tolist()
+        'lpb': lpb_sig.tolist(),
+        'mic': mic_sig.tolist(),
+        'enh': enh_sig.tolist()
     }
 
     response = requests.post(SCORING_URL, json=audio_data, auth=AUTH)

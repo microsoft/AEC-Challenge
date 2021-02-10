@@ -41,7 +41,8 @@ def main(input_dir, dataset_dir, score_file):
 
     scores = []
     for clip_path in tqdm(clips):
-        lpb_path, mic_path = get_lpb_mic_paths(input_dir, clip_path)
+        lpb_path, mic_path = get_lpb_mic_paths(
+            input_dir, dataset_dir, clip_path)
 
         lpb_sig, mic_sig, enh_sig = read_and_process_audio_files(
             lpb_path, mic_path, clip_path)
@@ -61,7 +62,7 @@ def main(input_dir, dataset_dir, score_file):
         scores_df.to_csv(score_file, index=False)
 
 
-def get_lpb_mic_paths(input_dir, clip_path):
+def get_lpb_mic_paths(input_dir, dataset_dir, clip_path):
     relative_path = os.path.relpath(clip_path, input_dir)
 
     clip_filename = os.path.basename(clip_path)

@@ -47,7 +47,8 @@ def main(input_dir, dataset_dir, score_file):
         lpb_sig, mic_sig, enh_sig = read_and_process_audio_files(
             lpb_path, mic_path, clip_path)
 
-        clip_scores = get_score(lpb_sig, mic_sig, enh_sig)
+        clip_scores = get_score(lpb_sig, mic_sig, enh_sig,
+                                get_clip_scenario(os.path.basename(clip_path)))
 
         score = {'file': os.path.basename(clip_path)}
         score.update(clip_scores)
@@ -146,11 +147,12 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
     return lpb_sig, mic_sig, enh_sig
 
 
-def get_score(lpb_sig, mic_sig, enh_sig):
+def get_score(lpb_sig, mic_sig, enh_sig, scenario):
     audio_data = {
         'lpb': lpb_sig.tolist(),
         'mic': mic_sig.tolist(),
-        'enh': enh_sig.tolist()
+        'enh': enh_sig.tolist(),
+        'scenario': scenario
     }
 
     response = requests.post(SCORING_URL, json=audio_data, auth=AUTH)

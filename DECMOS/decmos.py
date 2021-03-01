@@ -125,15 +125,14 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
     if clip_scenario in ['doubletalk_with_movement', 'doubletalk']:
         silence_duration = 15 * SAMPLE_RATE  # in seconds
         rating_dt_length = int((len(enh_sig) - silence_duration) / 2)
-        assert rating_dt_length > 0, f'Clip {clip_name} is too short for cutting'
 
-        lpb_sig = lpb_sig[-rating_dt_length:]
-        mic_sig = mic_sig[-rating_dt_length:]
-        enh_sig = enh_sig[-rating_dt_length:]
+        if rating_dt_length > 0:
+            lpb_sig = lpb_sig[-rating_dt_length:]
+            mic_sig = mic_sig[-rating_dt_length:]
+            enh_sig = enh_sig[-rating_dt_length:]
 
     elif clip_scenario in ['farend_singletalk_with_movement', 'farend_singletalk']:
         rating_fest_length = int(len(enh_sig) / 2)
-        assert rating_fest_length > 0, f'Clip {clip_name} is too short for cutting'
 
         lpb_sig = lpb_sig[-rating_fest_length:]
         mic_sig = mic_sig[-rating_fest_length:]

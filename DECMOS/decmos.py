@@ -47,7 +47,8 @@ def main(input_dir, dataset_dir, score_file):
         lpb_sig, mic_sig, enh_sig = read_and_process_audio_files(
             lpb_path, mic_path, clip_path)
 
-        clip_scores = get_score(lpb_sig, mic_sig, enh_sig)
+        clip_scores = get_score(lpb_sig, mic_sig, enh_sig,
+                                get_clip_scenario(os.path.basename(clip_path)))
 
         score = {'file': os.path.basename(clip_path)}
         score.update(clip_scores)
@@ -124,15 +125,14 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
     if clip_scenario in ['doubletalk_with_movement', 'doubletalk']:
         silence_duration = 15 * SAMPLE_RATE  # in seconds
         rating_dt_length = int((len(enh_sig) - silence_duration) / 2)
-        assert rating_dt_length > 0, f'Clip {clip_name} is too short for cutting'
 
-        lpb_sig = lpb_sig[-rating_dt_length:]
-        mic_sig = mic_sig[-rating_dt_length:]
-        enh_sig = enh_sig[-rating_dt_length:]
+        if rating_dt_length > 0:
+            lpb_sig = lpb_sig[-rating_dt_length:]
+            mic_sig = mic_sig[-rating_dt_length:]
+            enh_sig = enh_sig[-rating_dt_length:]
 
     elif clip_scenario in ['farend_singletalk_with_movement', 'farend_singletalk']:
         rating_fest_length = int(len(enh_sig) / 2)
-        assert rating_fest_length > 0, f'Clip {clip_name} is too short for cutting'
 
         lpb_sig = lpb_sig[-rating_fest_length:]
         mic_sig = mic_sig[-rating_fest_length:]
@@ -146,11 +146,12 @@ def process_interspeech2021(lpb_sig, mic_sig, enh_sig, clip_path):
     return lpb_sig, mic_sig, enh_sig
 
 
-def get_score(lpb_sig, mic_sig, enh_sig):
+def get_score(lpb_sig, mic_sig, enh_sig, scenario):
     audio_data = {
         'lpb': lpb_sig.tolist(),
         'mic': mic_sig.tolist(),
-        'enh': enh_sig.tolist()
+        'enh': enh_sig.tolist(),
+        'scenario': scenario
     }
 
     response = requests.post(SCORING_URL, json=audio_data, auth=AUTH)

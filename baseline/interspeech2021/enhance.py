@@ -100,16 +100,22 @@ if __name__ == "__main__":
         sampling_rate=sampling_rate,
         spectral_floor=-120.)
 
-    mic_paths = glob.glob(os.path.join(args.data_dir, "*_mic.wav"))
+    mic_paths = glob.iglob(os.path.join(args.data_dir, "**/*_mic.wav"), recursive=True)
+    
     for mic_path in tqdm(mic_paths):
-        basename = os.path.basename(mic_path)
         farend_path = mic_path.replace("_mic.wav", "_lpb.wav")
         if not os.path.exists(farend_path):
             print("Farend file not found, skipping:", farend_path)
             continue
 
-        out_path = os.path.join(args.output_dir, basename)
+        out_path = os.path.join(args.output_dir, mic_path[len(args.data_dir):])
         if os.path.exists(out_path):
             print("Enhanced file exists, overwriting:", out_path)
+
+        basename = os.path.dirname(out_path)
+        if not os.path.exists(basename):
+            print(f"Creating output directory: {basename}")
+            os.makedirs(basename)
+
         x_enhanced = model.enhance(mic_path, farend_path, out_path)
         sf.write(out_path, x_enhanced, sampling_rate)

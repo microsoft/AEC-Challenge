@@ -19,22 +19,23 @@ git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 If you use this dataset in a publication please cite the following paper:<br />  
 
 ```BibTex
-@article{Sridar2020,
-  title={ICASSP 2021 Acoustic Echo Cancellation Challenge: Datasets and Testing Framework},
-  author={Kusha Sridhar, Ross Cutler, Ando Saabas, Tanel Parnamaa, Hannes Gamper, Sebastian Braun, Robert Aichner, Sriram Srinivasan},
-  journal={arXiv preprint arXiv:2009.04972},
-  year={2020},
-  url={https://arxiv.org/pdf/2009.04972.pdf}
+@inproceedings{Cutler2021AEC,
+  title={INTERSPEECH 2021 Acoustic Echo Cancellation Challenge: Datasets and Testing Framework},
+  author={Ross Cutler, Ando Saabas, Tanel Parnamaa, Markus Loide, Sten Sootla, Marju Purin, Hannes Gamper, Sebastian Braun, Karsten Sorensen, Robert Aichner, Sriram Srinivasan},
+  booktitle={INTERSPEECH 2021}
+  year={2021},
 }
 ```
 
 If you use the test framework in a publication please cite the following paper:<br />
 ```BibTex
-@article{naderi2020open,
-  title={An Open source Implementation of ITU-T Recommendation P. 808 with Validation},
-  author={Naderi, Babak and Cutler, Ross},
-  journal={arXiv preprint arXiv:2005.08138},
-  year={2020}
+@inproceedings{cutler2021crowdsourcing,
+  title={Crowdsourcing approach for subjective evaluation of echo impairment},
+  author={Cutler, Ross and Nadari, Babak and Loide, Markus and Sootla, Sten and Saabas, Ando},
+  booktitle={ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={406--410},
+  year={2021},
+  organization={IEEE}
 }
 ```
 

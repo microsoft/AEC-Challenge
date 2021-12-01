@@ -1,10 +1,14 @@
 # AEC Challenge
-The INTERSPEECH 2021 Acoustic Echo Cancellation Challenge is intended to stimulate research in the area of acoustic echo cancellation (AEC), which is an important part of speech enhancement and still a top issue in audio communication and conferencing systems. Many recent AEC studies report reasonable performance on synthetic datasets where the train and test samples come from the same underlying distribution. However, the AEC performance often degrades significantly on real recordings. Also, most of the conventional objective metrics such as  echo return loss enhancement (ERLE) and perceptual evaluation of speech quality (PESQ) do not correlate well with subjective speech quality tests in the presence of background noise and reverberation found in realistic environments. In this challenge, we open source two large datasets to train AEC models under both single talk and double talk scenarios. These datasets consist of recordings from more than 5,000 real audio devices and human speakers in real environments, as well as a synthetic dataset. We open source an online subjective test framework based on [ITU-T P.808](https://github.com/microsoft/P.808) for researchers to quickly test their results. The winners of this challenge will be selected based on the average P.808 Mean Opinion Score (MOS) achieved across all different single talk and double talk scenarios.
+The ICASSP 2022 Acoustic Echo Cancellation Challenge is intended to stimulate research in the area of acoustic echo cancellation (AEC), which is an important part of speech enhancement and still a top issue in audio communication and conferencing systems. This is the third AEC challenge and it is enhanced by including mobile scenarios, adding speech recognition rate in the challenge goal metrics, and making the default sample rate 48 kHz. In this challenge, we open source two large datasets to train AEC models under both single talk and double talk scenarios. These datasets consist of recordings from more than 7,500 real audio devices and human speakers in real environments, as well as a synthetic dataset. We also open source an online subjective test framework and provide an online objective metric service for researchers to quickly test their results. The winners of this challenge are selected based on the average Mean Opinion Score achieved across all different single talk and double talk scenarios, and the speech recognition rate.
 
-For more details about the challenge, please visit the challenge [website](http://aec-challenge.azurewebsites.net/) and refer to the [paper](https://www.researchgate.net/profile/Ross-Cutler/publication/352135082_INTERSPEECH_2021_ACOUSTIC_ECHO_CANCELLATION_CHALLENGE/links/60ba7de5458515218f8f8b88/INTERSPEECH-2021-ACOUSTIC-ECHO-CANCELLATION-CHALLENGE.pdf).
+For more details about the challenge, please visit the challenge [website](https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-icassp-2022/) and refer to the [paper](https://www.researchgate.net/publication/356204168_ICASSP_2022_Acoustic_Echo_Cancellation_Challenge).
+
+
 
 # Repo details
 * The datasets directory contains the real and synthetic training datasets and real test sets.
+* Test set for the ICASSP 2022 challenge is located at https://github.com/microsoft/AEC-Challenge/tree/main/datasets/test_set_icassp2022.
+* Links to newest fullband real-world recordings are located at https://github.com/microsoft/AEC-Challenge/tree/main/datasets/fullband and https://github.com/microsoft/AEC-Challenge/tree/main/datasets/fullband_mobile.
 
 # Usage
 1. Set up Git Large File Storage (LFS) for faster download of the datasets. First, [download](https://git-lfs.github.com/) and install the Git LFS client. Then, set up Git LFS for your user account by running:
@@ -15,6 +19,9 @@ git lfs install
 ```
 git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ```
+
+
+
 ## Citation:
 If you use this dataset in a publication please cite the following paper:<br />  
 

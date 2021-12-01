@@ -26,11 +26,11 @@ git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 If you use this dataset in a publication please cite the following paper:<br />  
 
 ```BibTex
-@inproceedings{cutler2021AEC,
-  title={INTERSPEECH 2021 Acoustic Echo Cancellation Challenge: Datasets and Testing Framework},
-  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Loide, Markus and Sootla, Sten and Purin, Marju and Gamper, Hannes and Braun, Sebastian and  Sorensen, Karsten and Aichner, Robert and Srinivasan, Sriram},
-  booktitle={INTERSPEECH 2021}
-  year={2021},
+@inproceedings{cutler2022AEC,
+  title={ICASSP 2022 Acoustic Echo Cancellation Challenge},
+  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Purin, Marju and Gamper, Hannes and Braun, Sebastian and  Sorensen, Karsten and Aichner, Robert},
+  booktitle={ICASSP 2022}
+  year={2022},
 }
 ```
 

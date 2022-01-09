@@ -23,7 +23,18 @@ git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 
 
 ## Citation:
-If you use this dataset in a publication please cite the following paper:<br />  
+If you use this dataset in a publication please cite the following papers:<br />  
+
+The most recent published challenge: 
+```BibTex
+@inproceedings{cutler2021interspeech,
+  title={Interspeech 2021 acoustic echo cancellation challenge},
+  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Loide, Markus and Sootla, Sten and Purin, Marju and Gamper, Hannes and Braun, Sebastian and Sorensen, Karsten and Aichner, Robert and Srinivasan, Sriram},
+  booktitle={Proc. Interspeech},
+  year={2021}
+}
+```
+The next challenge: 
 
 ```BibTex
 @inproceedings{cutler2022AEC,

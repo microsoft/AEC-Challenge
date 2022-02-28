@@ -1,5 +1,5 @@
 # AEC Challenge
-The ICASSP 2022 Acoustic Echo Cancellation Challenge is intended to stimulate research in the area of acoustic echo cancellation (AEC), which is an important part of speech enhancement and still a top issue in audio communication and conferencing systems. This is the third AEC challenge and it is enhanced by including mobile scenarios, adding speech recognition rate in the challenge goal metrics, and making the default sample rate 48 kHz. In this challenge, we open source two large datasets to train AEC models under both single talk and double talk scenarios. These datasets consist of recordings from more than 7,500 real audio devices and human speakers in real environments, as well as a synthetic dataset. We also open source an online subjective test framework and provide an online objective metric service for researchers to quickly test their results. The winners of this challenge are selected based on the average Mean Opinion Score achieved across all different single talk and double talk scenarios, and the speech recognition rate.
+The ICASSP 2022 Acoustic Echo Cancellation Challenge is intended to stimulate research in the area of acoustic echo cancellation (AEC), which is an important part of speech enhancement and still a top issue in audio communication and conferencing systems. This is the third AEC challenge and it is enhanced by including mobile scenarios, adding speech recognition rate in the challenge goal metrics, and making the default sample rate 48 kHz. In this challenge, we open source two large datasets to train AEC models under both single talk and double talk scenarios. These datasets consist of recordings from more than 10,000 real audio devices and human speakers in real environments, as well as a synthetic dataset. We also open source an online subjective test framework and provide an online objective metric service for researchers to quickly test their results. The winners of this challenge are selected based on the average Mean Opinion Score achieved across all different single talk and double talk scenarios, and the speech recognition rate.
 
 For more details about the challenge, please visit the challenge [website](https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-icassp-2022/) and refer to the [paper](https://www.researchgate.net/publication/356204168_ICASSP_2022_Acoustic_Echo_Cancellation_Challenge).
 
@@ -25,31 +25,41 @@ git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ## Citation:
 If you use this dataset in a publication please cite the following papers:<br />  
 
-The most recent published challenge: 
-```BibTex
-@inproceedings{cutler2021interspeech,
-  title={Interspeech 2021 acoustic echo cancellation challenge},
-  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Loide, Markus and Sootla, Sten and Purin, Marju and Gamper, Hannes and Braun, Sebastian and Sorensen, Karsten and Aichner, Robert and Srinivasan, Sriram},
-  booktitle={Proc. Interspeech},
-  year={2021}
-}
-```
-The next challenge: 
-
 ```BibTex
 @inproceedings{cutler2022AEC,
   title={ICASSP 2022 Acoustic Echo Cancellation Challenge},
   author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Purin, Marju and Gamper, Hannes and Braun, Sebastian and  Sorensen, Karsten and Aichner, Robert},
   booktitle={ICASSP 2022}
-  year={2022},
+  year={2022}
 }
 ```
 
+Previous challenges were:
+
+```BibTex
+@inproceedings{cutler2021interspeech,
+  title={INTERSPEECH 2021 acoustic echo cancellation challenge},
+  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Loide, Markus and Sootla, Sten and Purin, Marju and Gamper, Hannes and Braun, Sebastian and Sorensen, Karsten and Aichner, Robert and Srinivasan, Sriram},
+  booktitle={INTERSPEECH},
+  year={2021}
+}
+```
+
+```BibTex
+@inproceedings{sridhar2021icassp,
+  title={ICASSP 2021 acoustic echo cancellation challenge: Datasets, testing framework, and results},
+  author={Sridhar, Kusha and Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Loide, Markus and Gamper, Hannes and Braun, Sebastian and Aichner, Robert and Srinivasan, Sriram},
+  booktitle={ICASSP},
+  year={2021}
+} 
+```
+
 If you use the test framework in a publication please cite the following paper:<br />
+
 ```BibTex
 @inproceedings{cutler2021crowdsourcing,
   title={Crowdsourcing approach for subjective evaluation of echo impairment},
-  author={Cutler, Ross and Nadari, Babak and Loide, Markus and Sootla, Sten and Saabas, Ando},
+  author={Cutler, Ross and Naderi, Babak and Loide, Markus and Sootla, Sten and Saabas, Ando},
   booktitle={ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   pages={406--410},
   year={2021},

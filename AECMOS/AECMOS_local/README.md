@@ -19,6 +19,10 @@ From the AECMOS onnx directory, run aecmos.py with the following required argume
 
 Use default values for the rest. Run to score the clips.
 
+## Model versions:
+- version 2: Run1644323924_Stage-0.onnx
+- version 3: Run_1657188842_Stage_0.onnx
+
 ## NB! 
 When using AECMOS with the interspeech 2021 or the ICASSP2022 test set, make sure to only evaluate the actual parts to be rated, as the clips have been made longer to allow models to converge.
 

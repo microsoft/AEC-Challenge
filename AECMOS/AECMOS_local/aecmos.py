@@ -26,6 +26,8 @@ class AECMOSEstimator():
         self.sampling_rate = 16000
         if 'Run1644323924_Stage-0' in self.model_path:
             self.transform = self._mel_transform
+        elif 'Run_1657188842_Stage_0' in self.model_path:
+            self.transform = self._mel_transform
         else:
             ValueError, "Not a supported model."
 

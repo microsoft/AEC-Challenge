@@ -24,7 +24,7 @@ Use default values for the rest. Run to score the clips.
 - version 2: Run1644323924_Stage-0.onnx (some bugs in scoring single talk scenarios)
 - version 3: Run_1657188842_Stage_0.onnx 
 - version 4: Run_1663915512_Stage_0.onnx
-- version 4 no_scenarios: Run_1663829550_Stage_0.onnx (does not need scenario information as part of inputs; the performance is about 2% lower in correlation with the ground truth than model 4)
+- version 4 no_scenarios: Run_1663829550_Stage_0.onnx (does not need scenario information as part of inputs; the performance is about 2% lower in correlation with the ground truth than model 4; use with batch size 1)
 
 ## NB! 
 When using AECMOS with the interspeech 2021 or the ICASSP2022 test set, make sure to only evaluate the actual parts to be rated, as the clips have been made longer to allow models to converge.

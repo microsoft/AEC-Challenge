@@ -1,21 +1,12 @@
 # AECMOS
 
-We have created AECMOS for evaluating clips with regards to echo ratings and other degradations ratings
+We have created AECMOS for evaluating audio clips with regards to two categories: echo ratings and other degradations ratings.
 
-There are two way for you to use AECMOS:
- - we have created a web API (see below for access details)
- - we are releasing an onnx version of the AECMOS model
+We are releasing onnx versions of the AECMOS model. The onnx models and inference script are located in the AECMOS_local directory. 
 
- We recommend the second way, using the onnx model, because it can be much faster than the web API. The onnx model and inference script are located in the AECMOS_local directory. 
+We no longer update the web API. If you have previously used the web API, please note that the scoring_url is now versioned, e.g. https://dnsmos.azurewebsites.net/v2/aecmos/score-dec indicates version number 2. This way it is easy for you to know which model version you have been using.
 
-
-To get access to the web API, email aec_challenge@microsoft.com with the following details:
- - Contact Name
- - Research Group/Institute/Company
- - Purpose of using AECMOS
-
-We will send you the *SCORING_URL* and *AUTH* keys that can be used with the script or with your own code.
-Please note that the scoring_url is now versioned, e.g. https://dnsmos.azurewebsites.net/v2/aecmos/score-dec indicates version number 2. This way it is easy for you to know which model version you are using.
+Please email aec_challenge@microsoft.com with any questions.
 
 ## NB! 
 When using AECMOS with the interspeech 2021 or the ICASSP2022 test set, make sure to only send the actual parts to be rated, as the clips have been made longer to allow models to converge.

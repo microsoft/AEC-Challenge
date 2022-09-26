@@ -11,17 +11,20 @@
 
 ## Usage:
 From the AECMOS onnx directory, run aecmos.py with the following required arguments:
-- -talk_type "Specify the scenario: 'st' (far-end single talk), 'nst' (near-end single talk), or 'dt' (double talk)."
 - -model_path "Specify the path to the onnx model provided"
 - -lpb_path "Specify the path to the lpb audio file"
 - -mic_path "Specify the path to the mic audio file"
 - -enh_path "Specify the path to the mic audio file"
+In addition, if you are using a scenario-based model:
+- -talk_type "Specify the scenario: 'st' (far-end single talk), 'nst' (near-end single talk), or 'dt' (double talk)."
 
 Use default values for the rest. Run to score the clips.
 
 ## Model versions:
 - version 2: Run1644323924_Stage-0.onnx (some bugs in scoring single talk scenarios)
-- version 3: Run_1657188842_Stage_0.onnx
+- version 3: Run_1657188842_Stage_0.onnx 
+- version 4: Run_1663915512_Stage_0.onnx
+- version 4 no_scenarios: Run_1663829550_Stage_0.onnx (does not need scenario information as part of inputs; the performance is about 2% lower in correlation with the ground truth than model 4)
 
 ## NB! 
 When using AECMOS with the interspeech 2021 or the ICASSP2022 test set, make sure to only evaluate the actual parts to be rated, as the clips have been made longer to allow models to converge.

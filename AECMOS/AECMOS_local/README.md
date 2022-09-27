@@ -15,6 +15,7 @@ From the AECMOS onnx directory, run aecmos.py with the following required argume
 - -lpb_path "Specify the path to the lpb audio file"
 - -mic_path "Specify the path to the mic audio file"
 - -enh_path "Specify the path to the mic audio file"
+
 In addition, if you are using a scenario-based model:
 - -talk_type "Specify the scenario: 'st' (far-end single talk), 'nst' (near-end single talk), or 'dt' (double talk)."
 

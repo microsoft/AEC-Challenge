@@ -24,25 +24,36 @@ def parse_args():
 
 
 class AECMOSEstimator():
-    DFT_SIZE = 512
-    HOP_FRACTION = 0.5
 
     def __init__(self, model_path):
         self.model_path = model_path
         self.max_len = 20
-        self.sampling_rate = 16000
+        self.hop_fraction = 0.5
+
         if 'Run_1663915512_Stage_0' in self.model_path:
+            self.sampling_rate = 16000
+            self.dft_size = 512
             self.transform = self._mel_transform
             self.need_scenario_marker = True
+            self.hidden_size = (4, 1, 64)
         elif 'Run_1663829550_Stage_0' in self.model_path:
+            self.sampling_rate = 16000
+            self.dft_size = 512
             self.transform = self._mel_transform
             self.need_scenario_marker = False
+            self.hidden_size = (4, 1, 64)
+        elif 'Run_1668423760_Stage_0' in self.model_path:
+            self.sampling_rate = 48000
+            self.dft_size = 1536
+            self.transform = self._mel_transform
+            self.need_scenario_marker = False
+            self.hidden_size = (4, 1, 96)
         else:
             ValueError, "Not a supported model."
 
     def _mel_transform(self, sample, sr):
         mel_spec = librosa.feature.melspectrogram(
-            y=sample, sr=sr, n_fft=512 + 1, hop_length=256, n_mels=160)
+            y=sample, sr=sr, n_fft=self.dft_size+1, hop_length=int(self.hop_fraction*self.dft_size), n_mels=160)
         mel_spec = (librosa.power_to_db(mel_spec, ref=np.max) + 40) / 40
         return mel_spec.T
 
@@ -104,7 +115,7 @@ class AECMOSEstimator():
 
         # GRU hidden layer shape is in h0
         with torch.no_grad():
-            h0 = torch.zeros((4, 1, 64), dtype=torch.float32).detach().numpy()
+            h0 = torch.zeros(self.hidden_size, dtype=torch.float32).detach().numpy()
         result = ort_session.run([], {input_name: feats, 'h0': h0})
         result = result[0]
 

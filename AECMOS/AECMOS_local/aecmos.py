@@ -46,7 +46,7 @@ class AECMOSEstimator():
             self.sampling_rate = 48000
             self.dft_size = 1536
             self.transform = self._mel_transform
-            self.need_scenario_marker = False
+            self.need_scenario_marker = True
             self.hidden_size = (4, 1, 96)
         else:
             ValueError, "Not a supported model."

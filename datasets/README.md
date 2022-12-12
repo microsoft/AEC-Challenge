@@ -24,3 +24,8 @@ Folder `real` includes recordings where far end signal is played back once. Fold
 The real files were captured on Windows PCs as shown below. Loopback is abbreviated lpb in the filenames. Some PCs may have audio DSP processing in the send and/or receive path, even though we used a raw mode to play and capture audio.
 
 ![alt text](https://github.com/microsoft/AEC-Challenge/blob/main/images/Recording.png)
+
+If downloading with your browser is slow, the following command should be faster:
+```
+azcopy copy <dataset_link> c:\temp
+```

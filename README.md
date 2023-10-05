@@ -3,8 +3,6 @@ The ICASSP 2023 Acoustic Echo Cancellation Challenge is intended to stimulate re
 
 For more details about the challenge, please visit the challenge [website](https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-icassp-2023/) and refer to the [paper](https://www.researchgate.net/publication/366205532_ICASSP_2023_ACOUSTIC_ECHO_CANCELLATION_CHALLENGE).
 
-
-
 # Repo details
 * The datasets directory contains the real and synthetic training datasets and real test sets.
 * Test set for the ICASSP 2022 challenge is located at https://github.com/microsoft/AEC-Challenge/tree/main/datasets/test_set_icassp2022.
@@ -20,10 +18,21 @@ git lfs install
 git clone https://github.com/microsoft/AEC-Challenge AEC-Challenge
 ```
 
-
-
 ## Citation:
 If you use this dataset in a publication please cite the following papers:<br />  
+
+```BibTex
+@misc{cutler2023icassp,
+  title={ICASSP 2023 Acoustic Echo Cancellation Challenge}, 
+  author={Cutler, Ross and Saabas, Ando and Parnamaa, Tanel and Purin, Marju and Indenbom, Evgenii and Ristea, Nicolae-Catalin and Gužvin, Jegor and Gamper, Hannes and Braun, Sebastian and Aichner, Robert},
+  year={2023},
+  eprint={2309.12553},
+  archivePrefix={arXiv},
+  primaryClass={eess.AS}
+}
+```
+
+Previous challenges were:
 
 ```BibTex
 @inproceedings{cutler2022AEC,
@@ -33,8 +42,6 @@ If you use this dataset in a publication please cite the following papers:<br />
   year={2022}
 }
 ```
-
-Previous challenges were:
 
 ```BibTex
 @inproceedings{cutler2021interspeech,

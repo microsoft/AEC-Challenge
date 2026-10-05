@@ -2,4 +2,4 @@ This data includes real recordings at a 48kHz sampling rate captured on Windows 
 
 | Link | MD5 checksum |
 | --- | --- |
-|[fullband.zip (19.3 GB)](https://aecchallengepublic.blob.core.windows.net/icassp2022/fullband.zip)|`9fbd434dcfd7426f4f49a2d1fac943e3` |
+|[fullband.zip (19.3 GB)](https://crowdsourcedatapub.blob.core.windows.net/crowdsource-data/aec_challenge_data_downloads/icassp2022/fullband.zip)|`9fbd434dcfd7426f4f49a2d1fac943e3` |

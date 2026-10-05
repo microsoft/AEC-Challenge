@@ -18,4 +18,4 @@ The data is available for download from the following link:
 
 | Link | MD5 checksum |
 | --- | --- |
-|[fullband_synthetic.zip (26.4 GB)](https://aecchallengepublic.blob.core.windows.net/icassp2022/fullband_synthetic.zip)|`4016e887707f5570069960ebf263b644` |
+|[fullband_synthetic.zip (26.4 GB)](https://crowdsourcedatapub.blob.core.windows.net/crowdsource-data/aec_challenge_data_downloads/icassp2022/fullband_synthetic.zip)|`4016e887707f5570069960ebf263b644` |
